@@ -1,51 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-
-    <color name="onyx">#FF373737</color>
-    <color name="eerie_black">#FF1D1D1D</color>
-    <color name="chinese_black">#FF111111</color>
-    <color name="wet_asphalt">#34495E</color>
-    <color name="midnight">#2C3E50</color>
-    <color name="portland_orange">#FFFF5435</color>  //رنگ تم لایت
-    <color name="portland_orange_alpha">#66FF5435</color>
-    <color name="congo_pink">#FFFF8877</color>  //رنگ تم دارک
-    <color name="congo_pink_alpha">#80FF8877</color>
-    <color name="baby_powder">#FFFFFFFB</color>
-    <color name="red">#FF0000</color>
-    <color name="gray">#908F9A</color>
-    <color name="cloud">#ECF0F1</color>
-    <color name="silver">#BDC3C7</color>
-    <color name="mediumGray">#D1D1D1</color>
-    <color name="tart_orange">#FF4646</color>
-    <color name="dark_gunmetal">#1F1D36</color>
-    <color name="dark_gunmetal_alpha">#801F1D36</color>
-    <color name="lightGray">#F9F9F9</color>
-    <color name="whiteSmoke">#f4f4f4</color>
-    <color name="darkLava">#453731</color>
-    <color name="raisinBlack">#2B1E17</color>
-    <color name="root_beer">#270D08</color>   //متن لایت
-    <color name="brown_coffee">#4D2D26</color>   //متن اینگردینت
-    <color name="rose_ebony">#5C4641 </color>   //متن تعداد اینگردینت
-    <color name="philippine_gray">#9A918A</color>    //متن لایت درجه 2
-    <color name="pale_pink">#FFEEEB</color>   //متن دارک
-    <color name="sea_shell">#F3FDFF</color>   //بک گراند دکمه های دیتیل
-    <color name="lavender_web">#E1EEFB</color>   //بک گراند دکمه های دیتیل
-    <color name="linen">#F8EEE8</color>
-    <color name="floral_white">#FFFAF9</color>   //بک گراند دکمه های دیتیل
-    <color name="big_foot_feet">#f68e56</color>   //بک گراند لاین ها
-    <color name="big_foot_feet2">#F69F70</color>   //بک گراند شماره
-    <color name="back_step">#F8F7F6</color>   //بک گراند شماره
-    <color name="back_nutrient">#E0FFF0</color>   //بک گراند شماره
-    <color name="back_nutrient2">#F0EBF8</color>   //بک گراند شماره
-    <color name="back_nutrient3">#FFEEDB</color>   //بک گراند شماره
-    <color name="light_red">#C2F5FF</color>   //بک گراند استپ لایت
-    <color name="chinese_yellow">#FFB109</color>   //رنگ کالری
-    <color name="time">#0083F7</color>   //رنگ ساعت
-    <color name="serving">#7DC28A</color>   //رنگ ساعت
-    <color name="carbText">#345745</color>   //رنگ ساعت
-    <color name="protein">#7602B1</color>   //رنگ پروئین
+    <!--My colors-->
+    <color name="chineseBlack">#0e0f14</color>
+    <color name="chineseBlackAlpha">#C80E0F14</color>
+    <color name="scarlet">#f81633</color>
+    <color name="raisinBlack">#1d1d27</color>
+    <color name="crayola">#feaa2e</color>
+    <color name="philippineSilver">#B3B3B3</color>
+    <color name="philippineSilverAlpha">#94B3B3B3</color>
+    <color name="gunmetal">#2C2E43</color>
 
 </resources>

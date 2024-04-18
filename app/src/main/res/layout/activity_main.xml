@@ -4,6 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="azizi.mahsa.movieSample.ui.MainActivity">
+    tools:context="azizi.mahsa.movieSample.ui.ui.MainActivity">
 
-   </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!--   Nav controller-->
+    <fragment
+        android:id="@+id/navHost"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:navGraph="@navigation/nav_main" />
+    <!--BottomNavigation-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:backgroundTint="@color/chineseBlack"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@color/color_bottom_nav"
+        app:itemTextColor="@color/color_bottom_nav"
+        app:menu="@menu/menu_main"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
