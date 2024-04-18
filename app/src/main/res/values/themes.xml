@@ -1,0 +1,360 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.YummyRecipes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/portland_orange</item>
+        <item name="colorPrimaryVariant">@color/baby_powder</item>
+        <item name="colorOnPrimary">@color/baby_powder</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+    </style>
+
+    <!--EditTextStyle-->
+    <style name="EditTextStyle">
+        <item name="drawableTint">@color/big_foot_feet</item>
+        <item name="android:background">@drawable/edittext_background_light</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_45mdp</item>
+        <item name="android:layout_marginTop">@dimen/_8mdp</item>
+        <item name="android:drawablePadding">@dimen/_6mdp</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:padding">@dimen/_2mdp</item>
+        <item name="colorError">@color/tart_orange</item>
+    </style>
+
+    <!--Bottom Nav Style-->
+    <style name="BottomNavMainStyle">
+        <item name="itemTextColor">@color/item_bottom_nav_tint_light</item>
+        <item name="itemIconTint">@color/item_bottom_nav_tint_light</item>
+    </style>
+
+    <!--Fab Style-->
+    <style name="FabStyle">
+        <item name="backgroundTint">@color/big_foot_feet</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+    <!--Avatar Style-->
+    <style name="AvatarStyle">
+        <item name="tint">@color/portland_orange</item>
+    </style>
+
+    <!--View All Txt-->
+    <style name="View_All_Txt">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/_15mdp</item>
+        <item name="android:text">@string/view_all</item>
+        <item name="android:textColor">@color/portland_orange</item>
+        <item name="android:textSize">@dimen/_10font_mdp</item>
+    </style>
+
+    <!--RV Lay-->
+    <style name="RV_Lay">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_13mdp</item>
+    </style>
+
+    <!--RV Title-->
+    <style name="RV_Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/_20mdp</item>
+        <item name="android:paddingEnd">@dimen/_5mdp</item>
+        <item name="android:textSize">@dimen/_13font_mdp</item>
+    </style>
+
+    <!--Recipe Recycler View-->
+    <style name="Recipe_Recycler_View">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/_5mdp</item>
+        <item name="android:paddingEnd">@dimen/_5mdp</item>
+        <item name="android:paddingTop">@dimen/_3mdp</item>
+        <item name="android:textSize">@dimen/_13font_mdp</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="shimmer_auto_start">true</item>
+        <item name="shimmer_recycler_item_count">3</item>
+        <item name="shimmer_recycler_shape">linear</item>
+    </style>
+
+    <!--Banner Lay-->
+    <style name="Banner_Lay">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">-3dp</item>
+        <item name="android:layout_marginEnd">-3dp</item>
+        <item name="android:layout_marginTop">@dimen/_13mdp</item>
+    </style>
+
+    <!--Banner Card View-->
+    <style name="Banner_Card_View">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_100mdp</item>
+        <item name="android:elevation">@dimen/_2mdp</item>
+    </style>
+
+    <!--Banner Image View-->
+    <style name="Banner_Image_View">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:contentDescription">@string/app_name</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!--Banner Shadow-->
+    <style name="Banner_Shadow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:alpha">0.8</item>
+        <item name="android:background">@drawable/bg_shadow_white</item>
+    </style>
+
+    <!--Banner Premium Text-->
+    <style name="Banner_Premium_Txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_13mdp</item>
+        <item name="android:layout_marginTop">@dimen/_15mdp</item>
+        <item name="android:text">@string/premium</item>
+        <item name="android:textColor">@color/portland_orange</item>
+        <item name="android:textSize">@dimen/_12font_mdp</item>
+    </style>
+
+    <!--Banner Title Text-->
+    <style name="Banner_Title_Txt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_10mdp</item>
+        <item name="android:layout_marginTop">@dimen/_50mdp</item>
+        <item name="android:textColor">@color/rose_ebony</item>
+        <item name="android:textSize">@dimen/_25font_mdp</item>
+    </style>
+    <!--Progressbar-->
+    <style name="OrangeProgressbar">
+        <item name="color">@color/portland_orange</item>
+    </style>
+    <!--Diet Chip-->
+    <style name="DietChip" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipBackgroundColor">@color/linen</item>
+        <item name="android:textColor">@color/brown_coffee</item>
+        <item name="chipIconEnabled">true</item>
+        <item name="android:clickable">false</item>
+        <item name="android:checkable">false</item>
+    </style>
+
+    <!--Buttons in detail Image-->
+    <style name="DetailImageButtons">
+        <item name="android:layout_width">@dimen/_28mdp</item>
+        <item name="android:layout_height">@dimen/_28mdp</item>
+        <item name="android:layout_margin">@dimen/_10mdp</item>
+        <item name="android:background">@drawable/bg_rounded_linen_stroke_light</item>
+        <item name="android:padding">@dimen/_7mdp</item>
+        <item name="tint">@color/big_foot_feet</item>
+    </style>
+
+    <!--Info Bar-->
+    <style name="InfoBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_rounded_linen_stroke_light</item>
+        <item name="elevation">@dimen/_4mdp</item>
+    </style>
+
+    <!--Detail Background-->
+    <style name="DetailBackground">
+        <item name="background">@color/floral_white</item>
+    </style>
+    <!--TextView3-->
+    <style name="TextView3">
+        <item name="android:textColor">@color/philippine_gray</item>
+    </style>
+    <!--TextView1-->
+    <style name="TextView1">
+        <item name="android:textColor">@color/root_beer</item>
+    </style>
+    <!--TextView2-->
+    <style name="TextView2">
+        <item name="android:textColor">@color/rose_ebony</item>
+    </style>
+    <!--RV Background-->
+    <style name="RVBackground"></style>
+
+    <!--STEP Background-->
+    <style name="stepBackground">
+        <item name="android:background">@drawable/bg_rounded_steps_light</item>
+    </style>
+    <!--Bg Rounded Orange Background-->
+    <style name="BgRoundedOrangeBackground">
+        <item name="android:background">@drawable/bg_rounded_orange</item>
+    </style>
+
+    <!--Favorite Title Style-->
+    <style name="FavoriteTitleStyle">
+        <item name="android:background">@drawable/bg_below_rounded_big_foot_feet</item>
+        <item name="tint">@color/white</item>
+    </style>
+    <!--Favorite Empty Style-->
+    <style name="FavoriteEmptyStyle">
+        <item name="android:drawableTint">@color/big_foot_feet</item>
+        <item name="android:textColor">@color/rose_ebony</item>
+    </style>
+    <!--SearchTextView-->
+    <style name="SearchTextView">
+        <item name="android:textColor">@color/big_foot_feet</item>
+    </style>
+    <!--SearchEditTextStyle-->
+    <style name="SearchEditTextStyle">
+        <item name="drawableTint">@color/portland_orange</item>
+        <item name="android:background">@drawable/edittext_background_light</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_45mdp</item>
+        <item name="android:drawablePadding">@dimen/_6mdp</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:textColor">@color/darkLava</item>
+        <item name="colorError">@color/tart_orange</item>
+    </style>
+
+    <!--Search Titles-->
+    <style name="Search_Titles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/_16mdp</item>
+        <item name="android:textColor">@color/darkLava</item>
+        <item name="android:paddingEnd">@dimen/_5mdp</item>
+        <item name="android:textSize">@dimen/_15font_mdp</item>
+    </style>
+
+    <!--Buttons in search -->
+    <style name="AdvancedSearchButtons">
+        <item name="android:layout_width">@dimen/_30mdp</item>
+        <item name="android:layout_height">@dimen/_30mdp</item>
+        <item name="android:layout_margin">@dimen/_7mdp</item>
+        <item name="android:background">@drawable/bg_rounded_linen_stroke_light</item>
+        <item name="android:padding">@dimen/_8mdp</item>
+        <item name="tint">@color/philippine_gray</item>
+    </style>
+
+    <!--Search With Button-->
+    <style name="SearchWithButtonStyle">
+        <item name="backgroundTint">@color/search_with_button_light</item>
+    </style>
+
+    <!--Filters Button-->
+    <style name="FilterButtonStyle">
+        <item name="backgroundTint">@color/whiteSmoke</item>
+        <item name="android:textColor">@color/rose_ebony</item>
+    </style>
+
+    <!--MealPlanner Recycler View-->
+    <style name="MealPlanner_Recycler_View">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/_5mdp</item>
+        <item name="android:paddingEnd">@dimen/_5mdp</item>
+        <item name="android:paddingTop">@dimen/_3mdp</item>
+        <item name="android:layout_marginTop">@dimen/_9mdp</item>
+        <item name="android:textSize">@dimen/_13font_mdp</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--Meal Planner Arrows style-->
+    <style name="Meal_Planner_Arrows_Style">
+        <item name="tint">@color/rose_ebony</item>
+        <item name="android:padding">@dimen/_10mdp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--Meal Planner Day style-->
+    <style name="Meal_Planner_Day_Style">
+        <item name="android:textColor">@color/rose_ebony</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_10mdp</item>
+        <item name="android:layout_marginTop">@dimen/_10mdp</item>
+        <item name="android:layout_marginBottom">@dimen/_26mdp</item>
+        <item name="android:textSize">@dimen/_16mdp</item>
+    </style>
+
+    <!--Meal Planner Day Date style-->
+    <style name="Meal_Planner_Day_Date_Style">
+        <item name="android:textColor">@color/philippine_gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_10mdp</item>
+        <item name="android:textSize">@dimen/_14mdp</item>
+    </style>
+
+    <!--Meal Planner ADD Button style-->
+    <style name="Meal_Planner_ADD_Button_Style">
+        <item name="android:textColor">@color/big_foot_feet</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_20mdp</item>
+        <item name="android:elevation">@dimen/_3mdp</item>
+        <item name="android:layout_marginEnd">@dimen/_5mdp</item>
+        <item name="android:paddingStart">@dimen/_20mdp</item>
+        <item name="android:paddingEnd">@dimen/_20mdp</item>
+        <item name="android:paddingBottom">@dimen/_4mdp</item>
+        <item name="android:text">+</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:background">@drawable/bg_rounded_linen_stroke_light</item>
+    </style>
+
+    <!--ChooseDayForMealStyle-->
+    <style name="ChooseDayForMealStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_7mdp</item>
+        <item name="android:background">@drawable/bg_rounded_linen_stroke_light</item>
+        <item name="android:paddingStart">@dimen/_20mdp</item>
+        <item name="android:paddingEnd">@dimen/_20mdp</item>
+        <item name="android:paddingTop">@dimen/_5mdp</item>
+        <item name="android:paddingBottom">@dimen/_5mdp</item>
+        <item name="android:text">@string/choose_the_day_to_plan_your_meal</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">@dimen/_12mdp</item>
+        <item name="android:textColor">@color/big_foot_feet</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:elevation">@dimen/_3mdp</item>
+
+    </style>
+
+    <!--meal planner today gradiant style-->
+    <style name="MealPlannerTodayGradiantStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginEnd">@dimen/_100mdp</item>
+        <item name="android:alpha">0.3</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:background">@drawable/bg_shadow_meal_planner_light</item>
+    </style>
+
+    <!--shopping list item background-->
+    <style name="ShoppingListItemBackground">
+        <item name="android:layout_margin">@dimen/_5mdp</item>
+        <item name="android:background">@drawable/bg_rounded_linen_stroke_very_light</item>
+        <item name="android:padding">@dimen/_5mdp</item>
+        <item name="tint">@color/big_foot_feet</item>
+    </style>
+
+    <!--Shopping List Items Style-->
+    <style name="ShoppingListItemsStyle">
+        <item name="android:layout_width">@dimen/_28mdp</item>
+        <item name="android:layout_height">@dimen/_28mdp</item>
+        <item name="android:layout_margin">@dimen/_10mdp</item>
+        <item name="android:background">@drawable/bg_rounded_linen_stroke_light</item>
+        <item name="android:padding">@dimen/_7mdp</item>
+        <item name="android:tint">@color/big_foot_feet</item>
+    </style>
+
+
+</resources>
