@@ -4,13 +4,13 @@ import com.google.gson.annotations.SerializedName
 
 data class ResponseRegister(
     @SerializedName("created_at")
-    val created_at: String,
+    val created_at: String?,
     @SerializedName("email")
-    val email: String,
+    val email: String?,
     @SerializedName("id")
-    val id: Int,
+    val id: Int?,
     @SerializedName("name")
-    val name: String,
+    val name: String?,
     @SerializedName("updated_at")
-    val updatedAt: String
+    val updatedAt: String?
 )

@@ -18,7 +18,7 @@ class RegisterViewModel @Inject constructor(private val repository: RegisterRepo
     val registerUser = MutableLiveData<ResponseRegister>()
     val loading = MutableLiveData<Boolean>()
 
-    fun registerUser(body: BodyRegister) = viewModelScope.launch {
+    fun sendRegisterUser(body: BodyRegister) = viewModelScope.launch {
         loading.postValue(true)
         val response = repository.registerUser(body)
         if (response.isSuccessful) {
