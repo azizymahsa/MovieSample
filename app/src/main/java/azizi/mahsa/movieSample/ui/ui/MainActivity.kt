@@ -9,7 +9,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import azizi.mahsa.movieSample.R
 import azizi.mahsa.movieSample.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     //Binding
     private lateinit var binding: ActivityMainBinding
