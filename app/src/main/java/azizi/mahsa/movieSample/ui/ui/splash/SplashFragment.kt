@@ -5,11 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.datastore.core.DataStore
 import androidx.lifecycle.coroutineScope
 import androidx.navigation.fragment.findNavController
 import azizi.mahsa.movieSample.R
-import azizi.mahsa.movieSample.databinding.ActivityMainBinding
 import azizi.mahsa.movieSample.databinding.FragmentSplashBinding
 import azizi.mahsa.movieSample.ui.utils.StoreUserData
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,7 +41,7 @@ class SplashFragment : Fragment() {
                 if (it.isEmpty()) {
                     findNavController().navigate(R.id.action_splash_to_register)
                 } else {
-                    findNavController().navigate(R.id.action_splash_to_home)
+                    findNavController().navigate(R.id.action_to_home)
 
                 }
             }
