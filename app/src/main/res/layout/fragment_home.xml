@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.ui.home.HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- Scroll -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/moviesScrollLay"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <!--Container-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Top Movies layout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/topMoviesLay"
+                app:layout_constraintTop_toTopOf="parent">
+                <!-- Top Movies -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/topMovieRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <!-- Indicator -->
+                <me.relex.circleindicator.CircleIndicator2
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_10mdp"
+                    app:layout_constraintTop_toBottomOf="@+id/topMovieRecycler"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:id="@+id/topMoviesIndicator"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
