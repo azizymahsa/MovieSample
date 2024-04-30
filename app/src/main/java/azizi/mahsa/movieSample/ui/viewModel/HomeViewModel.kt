@@ -18,6 +18,7 @@ class HomeViewModel @Inject constructor(private val repository: HomeRepository) 
         val response = repository.topMoviesList(id)
         if (response.isSuccessfull){
             topMoviesListLiveData.postValue(response.body())
+            
         }
     }
 
