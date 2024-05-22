@@ -27,4 +27,9 @@
         <item name="startIconTint">@color/philippineSilver</item>
     </style>
 
+    <!--RoundedImageView-->
+    <style name="RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_10mdp</item>
+    </style>
 </resources>
