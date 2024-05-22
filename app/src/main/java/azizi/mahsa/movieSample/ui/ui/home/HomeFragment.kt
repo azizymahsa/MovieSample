@@ -11,8 +11,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
-import androidx.recyclerview.widget.RecyclerView
 import azizi.mahsa.movieSample.databinding.FragmentHomeBinding
+import azizi.mahsa.movieSample.ui.ui.detail.initRecycler
 import azizi.mahsa.movieSample.ui.ui.home.adapter.TopMovieAdapter
 import azizi.mahsa.movieSample.ui.utils.showInvisible
 import azizi.mahsa.movieSample.ui.viewModel.HomeViewModel
@@ -97,9 +97,5 @@ class HomeFragment : Fragment() {
                 }
             }
         }
-    }
-    fun RecyclerView.initRecycler(layoutManager: RecyclerView.LayoutManager, adapter: RecyclerView.Adapter<*>) {
-        this.layoutManager = layoutManager
-        this.adapter = adapter
     }
 }

@@ -11,6 +11,7 @@ import azizi.mahsa.movieSample.R
 import azizi.mahsa.movieSample.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     //Binding
@@ -28,12 +29,13 @@ class MainActivity : AppCompatActivity() {
             //Navigation
             navController = findNavController(R.id.navHost)
             bottomNav.setupWithNavController(navController)
-            //show bottom navigation
+            //Show bottom navigation
             navController.addOnDestinationChangedListener { _, destination, _ ->
-                if(destination.id==R.id.splashFragment || destination.id == R.id.registerFragment){
+                if (destination.id == R.id.splashFragment || destination.id == R.id.registerFragment
+                    || destination.id == R.id.detailFragment) {
                     bottomNav.visibility = View.GONE
-                }else{
-                    bottomNav .visibility=View.VISIBLE
+                } else {
+                    bottomNav.visibility = View.VISIBLE
                 }
             }
         }
