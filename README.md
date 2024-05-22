@@ -21,7 +21,7 @@ Steps to install and set up the project:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repository-name.git
+   git clone https://github.com/azizymahsa/MovieSample.git
 
 ![searchmovie](https://github.com/azizymahsa/MovieSample/assets/37101768/7503e950-f50b-470e-a3e4-6d7e30f53602)
 ![sampleMovie2](https://github.com/azizymahsa/MovieSample/assets/37101768/96b1691f-9475-4c94-8bec-e6c24b5ed720)
