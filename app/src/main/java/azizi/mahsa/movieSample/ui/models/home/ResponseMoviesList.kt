@@ -1,4 +1,4 @@
-package azizi.mahsa.movieSample.ui.models.home
+package academy.nouri.s1_project.models.home
 
 import com.google.gson.annotations.SerializedName
 

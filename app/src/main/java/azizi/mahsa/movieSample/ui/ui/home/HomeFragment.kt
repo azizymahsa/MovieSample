@@ -1,37 +1,51 @@
 package azizi.mahsa.movieSample.ui.ui.home
 
-import android.os.Binder
+import academy.nouri.s1_project.ui.home.adapters.GenresAdapter
+import academy.nouri.s1_project.ui.home.adapters.LastMoviesAdapter
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import azizi.mahsa.movieSample.R
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
+import androidx.recyclerview.widget.RecyclerView
 import azizi.mahsa.movieSample.databinding.FragmentHomeBinding
+import azizi.mahsa.movieSample.ui.ui.home.adapter.TopMovieAdapter
+import azizi.mahsa.movieSample.ui.utils.showInvisible
+import azizi.mahsa.movieSample.ui.viewModel.HomeViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
     //Binding
     private lateinit var binding: FragmentHomeBinding
 
+    @Inject
+    lateinit var topMoviesAdapter: TopMovieAdapter
+
+    @Inject
+    lateinit var genresAdapter: GenresAdapter
+
+    @Inject
+    lateinit var lastMoviesAdapter: LastMoviesAdapter
+
+    //Other
+    private val viewModel: HomeViewModel by viewModels()
+    private val pagerHelper: PagerSnapHelper by lazy { PagerSnapHelper() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        //Call api
+        viewModel.loadTopMoviesList(3)
+        viewModel.loadGenresList()
+        viewModel.loadLastMoviesList()
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -40,7 +54,52 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         //InitViews
         binding.apply {
+            //Get top movies
+            viewModel.topMoviesList.observe(viewLifecycleOwner) {
+                topMoviesAdapter.differ.submitList(it.data)
+                //RecyclerView
+                topMoviesRecycler.initRecycler(
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false),
+                    topMoviesAdapter
+                )
+                //Indicator
+                pagerHelper.attachToRecyclerView(topMoviesRecycler)
+                topMoviesIndicator.attachToRecyclerView(topMoviesRecycler, pagerHelper)
+            }
+            //Get genres
+            viewModel.genresList.observe(viewLifecycleOwner) {
+                genresAdapter.differ.submitList(it)
+                genresRecycler.initRecycler(
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false),
+                    genresAdapter
+                )
+            }
+            //Get last movies
+            viewModel.lastMoviesList.observe(viewLifecycleOwner) {
+                lastMoviesAdapter.setData(it.data)
+                //RecyclerView
+                lastMoviesRecycler.initRecycler(LinearLayoutManager(requireContext()), lastMoviesAdapter)
+            }
+            //Click
+            lastMoviesAdapter.setOnItemClickListener {
+                val direction = HomeFragmentDirections.actionToDetail(it.id!!.toInt())
+                findNavController().navigate(direction)
+            }
 
+            //Loading
+            viewModel.loading.observe(viewLifecycleOwner) {
+                if (it) {
+                    moviesLoading.showInvisible(true)
+                    moviesScrollLay.showInvisible(false)
+                } else {
+                    moviesLoading.showInvisible(false)
+                    moviesScrollLay.showInvisible(true)
+                }
+            }
         }
+    }
+    fun RecyclerView.initRecycler(layoutManager: RecyclerView.LayoutManager, adapter: RecyclerView.Adapter<*>) {
+        this.layoutManager = layoutManager
+        this.adapter = adapter
     }
 }

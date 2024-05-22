@@ -1,5 +1,6 @@
 package azizi.mahsa.movieSample.ui.ui.home.adapter
 
+import academy.nouri.s1_project.models.home.ResponseMoviesList
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,8 +8,6 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import azizi.mahsa.movieSample.databinding.ItemHomeMoviesTopBinding
-import azizi.mahsa.movieSample.ui.models.home.ResponseMoviesList
-import azizi.mahsa.movieSample.ui.models.home.ResponseMoviesList.*
 import coil.load
 import javax.inject.Inject
 
@@ -29,7 +28,7 @@ class TopMovieAdapter @Inject constructor() : RecyclerView.Adapter<TopMovieAdapt
 
     inner class ViewHolder : RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("SetTextI18n")
-        fun setData(item: Data) {
+        fun setData(item: ResponseMoviesList.Data) {
             binding.apply {
                 movieNameTxt.text = item.title
                 movieInfoTxt.text = "${item.imdbRating} | ${item.country}| ${item.year}"
@@ -41,12 +40,12 @@ class TopMovieAdapter @Inject constructor() : RecyclerView.Adapter<TopMovieAdapt
         }
     }
 
-    private val differCallback = object : DiffUtil.ItemCallback<Data>() {
-        override fun areItemsTheSame(oldItem: Data, newItem: Data): Boolean {
+    private val differCallback = object : DiffUtil.ItemCallback<ResponseMoviesList.Data>() {
+        override fun areItemsTheSame(oldItem: ResponseMoviesList.Data, newItem: ResponseMoviesList.Data): Boolean {
             return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: Data, newItem: Data): Boolean {
+        override fun areContentsTheSame(oldItem: ResponseMoviesList.Data, newItem: ResponseMoviesList.Data): Boolean {
             return oldItem == newItem
         }
 
