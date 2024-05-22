@@ -12,6 +12,7 @@
 - Feature 3: ViewModel
 - Feature 4: Retrofit
 - Feature 5: DiffUtil
+- Feature 6:Coil(ImageLoader)
 
 
 
