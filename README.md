@@ -1,4 +1,4 @@
-# MovieList 
+# Movies List 
 
 
 ## About the Project
